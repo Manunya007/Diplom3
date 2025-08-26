@@ -11,6 +11,7 @@ import java.util.Properties;
 
 public class DriverHelper {
     protected WebDriver driver;
+
     public WebDriver initDriver() throws IOException {
         Properties properties = new Properties();
         properties.load(new FileInputStream("src/main/resources/browser.properties"));
