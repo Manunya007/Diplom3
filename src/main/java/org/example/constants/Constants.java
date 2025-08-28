@@ -19,12 +19,4 @@ public class Constants {
     //Форма регистрации
     public static final String EXPECTED_REGISTRATION_SUCCESS = "Вход";
     public static final String EXPECTED_REGISTRATION_ERROR = "Некорректный пароль";
-
-    //Переходы к разделам
-
-    public static final String EXPECTED_SAUCES = "Соусы";
-    public static final String EXPECTED_FILLINGS = "Начинки";
-    public static final String EXPECTED_BUNS = "Булки";
-
-
 }

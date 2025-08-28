@@ -7,13 +7,15 @@ import org.openqa.selenium.WebDriver;
 import static org.example.constants.Constants.HOME_PAGE_URL;
 
 public class ConstructorPage {
-    public static final By TAB_SAUCES = By.xpath(".//div/span[text()='Соусы']");
-    public static final By TAB_FILLINGS = By.xpath("//span[text()='Начинки']");
-    public static final By TAB_BUNS = By.xpath("//span[text()='Булки']");
-    public static final By TITLE_SAUCES = By.xpath("//h2[text()='Соусы']");
-    public static final By TITLE_FILLINGS = By.xpath("//h2[text()='Начинки']");
-    public static final By TITLE_BUNS = By.xpath("//h2[text()='Булки']");
+    private static final By TAB_SAUCES = By.xpath(".//div/span[text()='Соусы']");
+    private static final By TAB_FILLINGS = By.xpath("//div[contains(@class, 'tab_tab__1SPyG') and .//span[text()='Начинки']]");
+    private static final By TAB_BUNS = By.xpath("//div/span[text()='Булки']");
+    private static final By TAB_SAUCES_ACTIVE = By.xpath("//div[contains(@class, 'tab_tab_type_current__2BEPc') and .//span[text()='Соусы']]");
+    private static final By TAB_FILLINGS_ACTIVE = By.xpath("//div[contains(@class, 'tab_tab_type_current__2BEPc') and .//span[text()='Начинки']]");
+    private static final By TAB_BUNS_ACTIVE = By.xpath("//div[contains(@class, 'tab_tab_type_current__2BEPc') and .//span[text()='Булки']]");
     private final WebDriver driver;
+
+
     public ConstructorPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -39,19 +41,22 @@ public class ConstructorPage {
         driver.findElement(TAB_BUNS).click();
     }
 
-    @Step("Получение текста с заголовка раздела соусы")
-    public String tabSauces() {
-        return driver.findElement(TITLE_SAUCES).getText();
+    @Step("Проверка активности вкладки соусы")
+    public boolean tabSaucesActive() {
+        driver.findElement(TAB_SAUCES_ACTIVE);
+        return true;
     }
 
-    @Step("Получение текста с заголовка раздела начинки")
-    public String tabFillings() {
-        return driver.findElement(TITLE_FILLINGS).getText();
+    @Step("Проверка активности вкладки начинки")
+    public boolean tabFillingsActive() {
+        driver.findElement(TAB_FILLINGS_ACTIVE);
+        return true;
     }
 
-    @Step("Получение текста с заголовка раздела булки")
-    public String tabBuns() {
-        return driver.findElement(TITLE_BUNS).getText();
+    @Step("Проверка активности вкладки булки")
+    public boolean tabBunsActive() {
+        driver.findElement(TAB_BUNS_ACTIVE);
+        return true;
     }
 
 }

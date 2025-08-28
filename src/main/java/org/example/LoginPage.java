@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import static org.example.constants.Constants.*;
 
 public class LoginPage {
-    public static final By BUTTON_PLACE_AN_ORDER = By.xpath("//button[text()='Оформить заказ']");
-    public static final By BUTTON_PERSONAL_ACCOUNT = By.xpath("//p[text()='Личный Кабинет']");
-    public static final By BUTTON_LOGIN = By.cssSelector("a[href='/login']");
+    private static final By BUTTON_PLACE_AN_ORDER = By.xpath("//button[text()='Оформить заказ']");
+    private static final By BUTTON_PERSONAL_ACCOUNT = By.xpath("//p[text()='Личный Кабинет']");
+    private static final By BUTTON_LOGIN = By.cssSelector("a[href='/login']");
 
     private final WebDriver driver;
 

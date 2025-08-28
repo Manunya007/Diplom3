@@ -7,13 +7,13 @@ import org.openqa.selenium.WebDriver;
 import static org.example.constants.Constants.HOME_PAGE_URL;
 
 public class RegistrationPage {
-    public static final By BUTTON_LOGIN_TO_ACCOUNT = By.className("button_button__33qZ0");
-    public static final By BUTTON_REGISTRATION = By.className("Auth_link__1fOlj");
-    public static final By FIELD_NAME = By.xpath("//label[text()='Имя']/following-sibling::input");
-    public static final By FIELD_EMAIL = By.xpath("//div[label='Email']/input");
-    public static final By FIELD_PASSWORD = By.cssSelector("input[type='password'][name='Пароль']");
-    public static final By TITLE_ENTRANCE = By.xpath("//h2[text()='Вход']");
-    public static final By ERROR_PASSWORD = By.className("input__error");
+    private static final By BUTTON_LOGIN_TO_ACCOUNT = By.className("button_button__33qZ0");
+    private static final By BUTTON_REGISTRATION = By.className("Auth_link__1fOlj");
+    private static final By FIELD_NAME = By.xpath("//label[text()='Имя']/following-sibling::input");
+    private static final By FIELD_EMAIL = By.xpath("//div[label='Email']/input");
+    private static final By FIELD_PASSWORD = By.cssSelector("input[type='password'][name='Пароль']");
+    private static final By TITLE_ENTRANCE = By.xpath("//h2[text()='Вход']");
+    private static final By ERROR_PASSWORD = By.className("input__error");
     private final WebDriver driver;
 
     public RegistrationPage(WebDriver driver) {
